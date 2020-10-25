@@ -2,3 +2,19 @@ dist: focal
 language: elm
 elm:
   - 0.19.0
+
+install:
+  - npm i --also=dev
+
+script:
+  - elm-test
+  - elm make --optimize --output=public/index.html src/Main.elm
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  token: $GH_TOKEN
+  on:
+    branch:
+      - main

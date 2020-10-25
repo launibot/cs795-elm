@@ -1,9 +1,8 @@
 module SnakeTests exposing (..)
 
-import Main exposing (..)
-
 import Expect exposing (Expectation)
 import Fuzz exposing (Fuzzer, int, list, string)
+import Main exposing (..)
 import Test exposing (..)
 
 
@@ -39,6 +38,7 @@ inputTests =
                     |> Expect.equal (Move directions.right)
         ]
 
+
 collisionTests =
     describe "Collision event test"
         [ test "Continue playing without collision" <|
@@ -59,12 +59,13 @@ collisionTests =
                     |> Expect.equal (Lost "OOF THAT'S THE WALL!")
         ]
 
+
 gameStateLossTests =
     describe "Verify states map to a loss"
         [ test "Playing is not a loss" <|
             \_ ->
                 isLost Playing
-                    |> Expect.equal False
+                    |> Expect.equal True
         , test " Lost is a loss" <|
             \_ ->
                 isLost (Lost "Anything honestly")

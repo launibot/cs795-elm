@@ -65,7 +65,7 @@ gameStateLossTests =
         [ test "Playing is not a loss" <|
             \_ ->
                 isLost Playing
-                    |> Expect.equal True
+                    |> Expect.equal False
         , test " Lost is a loss" <|
             \_ ->
                 isLost (Lost "Anything honestly")

@@ -1,6 +1,6 @@
 dist: focal
 language: elm
-node_js: '10'
+node_js: '15'
 
 install:
   - npm i --also=dev

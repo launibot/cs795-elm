@@ -345,9 +345,9 @@ collisionToGameStatus collisionTestResult =
         AteFood ->
             Playing
         BitSelf ->
-            Lost "Yikes! You bit yourself!"
+            Lost "YIKES! YOU BIT YOURSELF!"
         HitWall ->
-            Lost "Oof! That's the wall!"
+            Lost "OOF THAT'S THE WALL!"
 
 
 subscriptions : Model -> Sub Msg

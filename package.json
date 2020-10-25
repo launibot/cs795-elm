@@ -1,0 +1,28 @@
+{
+  "name": "cs795-snake",
+  "version": "0.0.1",
+  "description": "A prototype snake game for demonstrating travis ci",
+  "main": "src/Main.elm",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "elm reactor",
+    "build": "elm make --optimize --output=public/index.html src/Main.elm",
+    "test": "npx elm-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamalex/cs795-elm.git"
+  },
+  "author": "Alex Launi <alaun001@odu.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lamalex/cs795-elm/issues"
+  },
+  "homepage": "https://github.com/lamalex/cs795-elm#readme",
+  "dependencies": {
+    "elm-format": "^0.8.4",
+    "elm-test": "^0.19.1-revision4"
+  }
+}
